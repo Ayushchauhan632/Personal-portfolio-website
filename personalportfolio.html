@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Your Name | Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0A74DA;
+      --dark: #112;
+      --light: #fff;
+    }
+    *, *::before, *::after {box-sizing: border-box;}
+    body {
+      margin:0; font-family:'Exo 2', sans-serif;
+      line-height:1.6; color: var(--dark);
+      background: var(--light);
+    }
+    header, section {max-width:900px; padding:60px 20px; margin:0 auto;}
+    header {text-align:center;}
+    header img {
+      width:160px; height:160px; border-radius:50%;
+      object-fit:cover; margin-bottom:20px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+    header h1 {margin:10px 0 5px; font-size:2.5rem;}
+    header p.subtitle {color:#555;}
+    .skills {display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px;}
+    .skills span {
+      background: var(--primary);
+      color: var(--light);
+      padding:6px 12px;
+      border-radius:12px;
+      font-size:0.9rem;
+    }
+    h2 {font-family:'Space Mono', monospace; font-size:1.8rem; margin-bottom:20px; position:relative;}
+    h2::after {content:''; position:absolute; left:0; bottom:-8px; width:60px; height:4px; background: var(--primary);}
+    .two-col {display:grid; grid-template-columns:1fr; gap:40px;}
+    @media(min-width:700px){ .two-col {grid-template-columns:1fr 1fr;} }
+    .about, .experience, .education, .projects, .contact {margin-bottom:60px;}
+    .projects .project-card {
+      border:1px solid #ddd;
+      padding:20px;
+      border-radius:8px;
+      transition:transform .2s,box-shadow .2s;
+    }
+    .projects .project-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    }
+    .contact form {
+      display:flex; flex-direction:column; gap:15px;
+    }
+    .contact input, .contact textarea {
+      padding:10px; font-size:1rem; border:1px solid #ccc; border-radius:4px;
+    }
+    .contact button {
+      width:150px; padding:10px;
+      background: var(--primary);
+      color: var(--light);
+      border:none; border-radius:4px;
+      cursor:pointer; font-size:1rem;
+    }
+    .contact button:hover {
+      background: darken(var(--primary),10%);
+    }
+    footer {text-align:center; padding:20px; background:#f5f5f5;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="your-photo.jpg" alt="Your Name">
+    <h1>Your Name</h1>
+    <p class="subtitle">Web Developer | JavaScript • React • Node.js</p>
+    <div class="skills">
+      <span>JavaScript</span><span>React</span><span>Node.js</span><span>CSS</span><span>HTML</span><span>Git</span>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate web developer with 5 years of experience building responsive, user-friendly web applications. I enjoy writing clean code and exploring new technologies.</p>
+  </section>
+
+  <section class="two-col">
+    <div class="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Frontend Developer</strong>, XYZ Corp • 2022–Present<br>Built and maintained responsive SPA using React and Redux.</li>
+        <li><strong>Web Developer</strong>, ABC Inc • 2020–2022<br>Developed full-stack apps with Node.js, Express, and MongoDB.</li>
+      </ul>
+    </div>
+    <div class="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Bachelor of Computer Science</strong>, University Name • 2016–2020</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="two-col">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>Short description of your project. [Link to live or repo]</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>Short description of your project. [Link to live or repo]</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <form onsubmit="alert('Thank you for reaching out!'); return false;">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message…" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>© 2025 Your Name • built with 💙 and code</footer>
+
+</body>
+</html>
